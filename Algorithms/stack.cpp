@@ -68,7 +68,7 @@ void convert(char infix[], char postfix[])
 	int j = 0;
 	char symbol;
 	stack[++top] = '#';
-	for (int i = 0; i < strlen(infix); i++)
+	for (unsigned int i = 0; i < strlen(infix); i++)
 	{
 		symbol = infix[i];
 		if (isOperator(symbol) == 0)
