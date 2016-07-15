@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="binarySearch.cpp" />
     <ClCompile Include="lineSearch.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="queue.cpp" />

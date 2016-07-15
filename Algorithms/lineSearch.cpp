@@ -5,7 +5,7 @@ const int MAX = 20;
 
 int intArray[MAX] = { 1,2,3,4,6,7,9,11,12,14,15,16,17,19,33,34,43,45,55,66 };
 
-void pringln(int count)
+void println(int count)
 {
 	for (int i = 0; i < count - 1; i++)
 	{

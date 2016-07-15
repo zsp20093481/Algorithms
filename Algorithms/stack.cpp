@@ -177,8 +177,8 @@ void main() {
 	char infix[25] = "1*(2+3)", postfix[25];
 	convert(infix, postfix);
 
-	printf("Infix expression is: %s\n", infix);
-	printf("Postfix expression is: %s\n", postfix);
-	printf("Evaluated expression is: %d\n", evaluate(postfix));
+	printf("infix expression is: %s\n", infix);
+	printf("postfix expression is: %s\n", postfix);
+	printf("evaluated expression is: %d\n", evaluate(postfix));
 	getchar();
 }

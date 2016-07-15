@@ -43,18 +43,18 @@ void merge_sort(int unsorted[], int first, int last, int sorted[])
 	}
 }
 
-//int main() {
-//	printf("This is test.\n");
-//	int x[] = { 6,2,4,1,5,9 };
-//	int sorted[6];
-//	merge_sort(x, 0, 6, sorted);
-//	for (int i = 0; i < 6; i++)
-//	{
-//		if (x[i] > 0)
-//		{
-//			cout << x[i] << endl;
-//		}
-//	}
-//	//getchar();
-//	system("pause");
-//}
+int main() {
+	printf("This is test.\n");
+	int x[] = { 6,2,4,1,5,9 };
+	int sorted[6];
+	merge_sort(x, 0, 6, sorted);
+	for (int i = 0; i < 6; i++)
+	{
+		if (x[i] > 0)
+		{
+			cout << x[i] << endl;
+		}
+	}
+	//getchar();
+	system("pause");
+}
