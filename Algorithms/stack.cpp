@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 
+//char stack
 char stack[25];
 int top = -1;
 
@@ -62,3 +63,121 @@ int isOperator(char symbol)
 }
 
 //converts infix expression to postfix
+void convert(char infix[], char postfix[])
+{
+	int j = 0;
+	char symbol;
+	stack[++top] = '#';
+	for (int i = 0; i < strlen(infix); i++)
+	{
+		symbol = infix[i];
+		if (isOperator(symbol) == 0)
+		{
+			postfix[j] = symbol;
+			j++;
+		}
+		else
+		{
+			if (symbol=='(')
+			{
+				push(symbol);
+			}
+			else
+			{
+				if (symbol == ')')
+				{
+					while (stack[top] != '(')
+					{
+						postfix[j] = pop();
+						j++;
+					}
+					pop();
+				}
+				else
+				{
+					if (precedence(symbol) > precedence(stack[top]))
+					{
+						push(symbol);
+					}
+					else
+					{
+						while (precedence(symbol) <= precedence(stack[top]))
+						{
+							postfix[j] = pop();
+							j++;
+						}
+						pop();
+					}
+				}
+			}
+		}
+	}
+
+	while (stack[top] != '#')
+	{
+		postfix[j] = pop();
+		j++;
+	}
+	postfix[j] = '\0';
+}
+
+// int stack
+int stack_int[25];
+int top_int = -1;
+
+void push_int(int item)
+{
+	stack_int[++top_int] = item;
+}
+
+char pop_int()
+{
+	return stack_int[top_int--];
+}
+
+int evaluate(char *postfix)
+{
+	char ch;
+	int i = 0, operand1, operand2;
+	while ((ch = postfix[i++]) != '\0')
+	{
+		if (isdigit(ch))
+		{
+			push_int(ch - '0');// Push the operand
+		}
+		else
+		{
+			//Operator,pop two  operands
+			operand2 = pop_int();
+			operand1 = pop_int();
+
+			switch (ch)
+			{
+			case '+':
+				push_int(operand1 + operand2);
+				break;
+			case '-':
+				push_int(operand1 - operand2);
+				break;
+			case '*':
+				push_int(operand1 * operand2);
+				break;
+			case '/':
+				push_int(operand1 / operand2);
+			default:
+				break;
+			}
+		}
+	}
+	return stack_int[top_int];
+}
+
+void main() {
+	char infix[25] = "1*(2+3)", postfix[25];
+	convert(infix, postfix);
+
+	printf("Infix expression is: %s\n", infix);
+	printf("Postfix expression is: %s\n", postfix);
+	printf("Evaluated expression is: %d\n", evaluate(postfix));
+	getchar();
+}
