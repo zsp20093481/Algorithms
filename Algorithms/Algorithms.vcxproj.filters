@@ -27,5 +27,8 @@
     <ClCompile Include="queue.cpp">
       <Filter>TEST</Filter>
     </ClCompile>
+    <ClCompile Include="lineSearch.cpp">
+      <Filter>TEST</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
