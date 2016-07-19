@@ -20,6 +20,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="binarySearch.cpp" />
+    <ClCompile Include="BubbleSort.cpp" />
+    <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="interpolationSearch.cpp" />
     <ClCompile Include="lineSearch.cpp" />
     <ClCompile Include="main.cpp" />
