@@ -1,10 +1,17 @@
-#include <iostream>
+#include "sort.h"
 using namespace std;
 
-const int MAX = 10;
 int list[MAX] = { 1,8,4,6,0,3,5,2,7,9 };
 
-void bubbleSort()
+sort::sort()
+{
+}
+
+sort::~sort()
+{
+}
+
+void sort::bubbleSort()
 {
 	int temp;
 
@@ -35,6 +42,5 @@ void bubbleSort()
 			break;
 		}
 		cout << "Iteration " << i + 1 << ": ";
-		display1();
 	}
 }

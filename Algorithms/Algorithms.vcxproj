@@ -19,14 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="binarySearch.cpp" />
-    <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="HashTable.cpp" />
-    <ClCompile Include="interpolationSearch.cpp" />
-    <ClCompile Include="lineSearch.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="queue.cpp" />
+    <ClCompile Include="search.cpp" />
+    <ClCompile Include="sort.cpp" />
     <ClCompile Include="stack.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="search.h" />
+    <ClInclude Include="sort.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{48BA6FD4-401A-413F-B502-98A9EA8CA186}</ProjectGuid>

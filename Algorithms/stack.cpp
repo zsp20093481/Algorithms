@@ -172,13 +172,3 @@ int evaluate(char *postfix)
 	}
 	return stack_int[top_int];
 }
-
-void main() {
-	char infix[25] = "1*(2+3)", postfix[25];
-	convert(infix, postfix);
-
-	printf("infix expression is: %s\n", infix);
-	printf("postfix expression is: %s\n", postfix);
-	printf("evaluated expression is: %d\n", evaluate(postfix));
-	getchar();
-}
