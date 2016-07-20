@@ -3,14 +3,14 @@
 using namespace std;
 
 const int MAX = 6;
-int intArray[MAX];
+int intArray1[MAX];
 int front = 0;
 int rear = -1;
 int itemCount = 0;
 
 int peek()
 {
-	return intArray[front];
+	return intArray1[front];
 }
 
 bool isEmpty()
@@ -35,14 +35,14 @@ void insertData(int data)
 		{
 			rear = -1;
 		}
-		intArray[++rear] = data;
+		intArray1[++rear] = data;
 		itemCount++;
 	}
 }
 
 int removeData()
 {
-	int data = intArray[front++];
+	int data = intArray1[front++];
 	if (front == MAX)
 	{
 		front = 0;

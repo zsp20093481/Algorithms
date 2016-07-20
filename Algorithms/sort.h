@@ -9,4 +9,9 @@ public:
 	sort();
 	~sort();
 	void bubbleSort();
+	void insertionSort();
+	void selectionSort();
+	void mergeSort(int unsorted[], int first, int last, int sorted[]);
+	void shellSort();
+	void quickSort(int left, int right);
 };
